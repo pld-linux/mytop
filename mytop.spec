@@ -11,6 +11,9 @@ Source0:	http://jeremy.zawodny.com/mysql/mytop/mytop-1.4.tar.gz
 URL:		http://jeremy.zawodny.com/mysql/mytop/
 BuildRequires:	perl-devel >= 1:5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-base
+Requires:	perl-Term-ReadKey
+Requires:	perl-DBD-mysql
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
