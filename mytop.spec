@@ -6,7 +6,7 @@ Version:	1.4
 Release:	2
 License:	GPL
 Group:		Applications/Databases
-Source0:	http://jeremy.zawodny.com/mysql/mytop/mytop-1.4.tar.gz
+Source0:	http://jeremy.zawodny.com/mysql/mytop/%{name}-%{version}.tar.gz
 # Source0-md5:	c917f519bc3add1d09e1695351dbca70
 URL:		http://jeremy.zawodny.com/mysql/mytop/
 BuildRequires:	perl-devel >= 1:5.6
