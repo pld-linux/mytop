@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Tool for monitoring the threads and overall performance of MySQL
-Summary(pl):	Narz阣zie do monitorowania w眛k體 i og髄nej wydajno禼i MySQL-a
+Summary(pl.UTF-8):   Narz臋dzie do monitorowania w膮tk贸w i og贸lnej wydajno艣ci MySQL-a
 Name:		mytop
 Version:	1.4
 Release:	2
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 mytop is a console-based (non-GUI) tool for monitoring the threads and
 overall performance of MySQL 3.22.x, 3.23.x, and 4.x servers.
 
-%description -l pl
-mytop to terminalowe (nie graficzne) narz阣zie do monitorowania w眛k體
-i og髄nej wydajno禼i serwer體 MySQL 3.22.x, 3.23.x i 4.x.
+%description -l pl.UTF-8
+mytop to terminalowe (nie graficzne) narz臋dzie do monitorowania w膮tk贸w
+i og贸lnej wydajno艣ci serwer贸w MySQL 3.22.x, 3.23.x i 4.x.
 
 %prep
 %setup -q
