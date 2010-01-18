@@ -48,5 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{_bindir}/mytop
+%attr(755,root,root) %{_bindir}/mytop
 %{_mandir}/man1/mytop.1p*
