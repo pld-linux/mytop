@@ -3,7 +3,7 @@ Summary:	Tool for monitoring the threads and overall performance of MySQL
 Summary(pl.UTF-8):	Narzędzie do monitorowania wątków i ogólnej wydajności MySQL-a
 Name:		mytop
 Version:	1.6
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://jeremy.zawodny.com/mysql/mytop/%{name}-%{version}.tar.gz
@@ -11,9 +11,9 @@ Source0:	http://jeremy.zawodny.com/mysql/mytop/%{name}-%{version}.tar.gz
 URL:		http://jeremy.zawodny.com/mysql/mytop/
 BuildRequires:	perl-devel >= 1:5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-base
-Requires:	perl-Term-ReadKey
 Requires:	perl-DBD-mysql
+Requires:	perl-Term-ReadKey
+Requires:	perl-base
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,11 +39,14 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm -f $RPM_BUILD_ROOT%{perl_archlib}/perllocal.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/mytop/.packlist
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%attr(755,root,root) %{_bindir}/m*
-%{_mandir}/man1/*
+%{_bindir}/mytop
+%{_mandir}/man1/mytop.1p*
