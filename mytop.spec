@@ -3,7 +3,7 @@ Summary:	Tool for monitoring the threads and overall performance of MySQL
 Summary(pl.UTF-8):	Narzędzie do monitorowania wątków i ogólnej wydajności MySQL-a
 Name:		mytop
 Version:	1.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://jeremy.zawodny.com/mysql/mytop/%{name}-%{version}.tar.gz
