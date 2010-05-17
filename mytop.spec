@@ -3,11 +3,14 @@ Summary:	Tool for monitoring the threads and overall performance of MySQL
 Summary(pl.UTF-8):	Narzędzie do monitorowania wątków i ogólnej wydajności MySQL-a
 Name:		mytop
 Version:	1.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Databases
 Source0:	http://jeremy.zawodny.com/mysql/mytop/%{name}-%{version}.tar.gz
 # Source0-md5:	4127c3e486eb664fed60f40849372a9f
+Patch0:		%{name}-getopt-long.patch
+Patch1:		%{name}-global-status.patch
+Patch2:		%{name}-queries-vs-questions.patch
 URL:		http://jeremy.zawodny.com/mysql/mytop/
 BuildRequires:	perl-devel >= 1:5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -27,6 +30,9 @@ i ogólnej wydajności serwerów MySQL 3.22.x, 3.23.x i 4.x.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 %{__perl} Makefile.PL \
